@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.typekit.net/avl5gjw.css">
+    <script src="https://kit.fontawesome.com/18bbd4b2d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- ITC Avant Garde Gothic Pro Bold
+        font-family: itc-avant-garde-gothic-pro, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    
+        ITC Avant Garde Gothic Pro Medium
+        font-family: itc-avant-garde-gothic-pro, sans-serif;
+        font-weight: 500;
+        font-style: normal; -->
+    <title>Client Login</title>
+</head>
+<body>  
+    <!-- NAV -->
+    <nav class="fixedNav" >
+        <ul class="navOne">
+            <div style="float: right; padding-top: 15px; padding-right: 15px; ">
+                    <a hidden id="userProfile" style="color:rgb(114, 114, 114); text-decoration: none; padding-right: 10px;" href="login.html">
+                        <i style="color: #9FCED5" class="fas fa-user-circle"></i>
+                        User Profile
+                    </a>
+                    <a id="signin-google" style="color:rgb(114, 114, 114); text-decoration: none;" href="login.html">
+                        <span style="color: #9FCED5"><i class="fas fa-user-circle"></i></span>
+                        Login / Signup
+                    </a>
+                    <a hidden id="signout-google" style="color:rgb(114, 114, 114); text-decoration: none;" href="#">
+                        <span style="color: #9FCED5"><i class="fas fa-sign-out-alt"></i></span>
+                        Log Out
+                    </a>
+                </div>
+            
+            <li style="float:left"><a class="navOneLi" href="#">
+                <span style="color: #9FCED5">
+                <i class="fas fa-map-marker-alt"></i>
+                </span>
+                Indianapolis, IN
+            </a></li>
+            <li style="float:left"><a class="navOneLi" href="#">
+                <span style="color: #9FCED5"><i class="fas fa-phone"></i></span>
+                (317) 459-3535
+            </a></li>
+        </ul>
+        <ul class="navTwo">
+            <li><button onclick="location.href = 'estimate.html';" class="navButton">Request an Estimate</button></li>
+            <li class="button hvr-grow"><a class="navTwoLi" href="review.html">Reviews</a></li>
+            <li><a class="navTwoLi" href="about.html">About Us</a></li>
+            <li><a class="navTwoLi" href="services.html">Cleaning Services</a></li>
+            <li style="float:left"><a class="navBrand" href="index.html">Happy Homes</a></li>
+        </ul>
+    </nav>
+
+    <!-- BODY -->
+    <div id="fullpage">
+        <div class="section">
+                <div class="createHero">
+                        <h4 style="font-family: itc-avant-garde-gothic-pro, sans-serif;
+                            font-weight: 500;
+                            font-style: normal;">Welcome Aboard!</h4>
+                        <h2>Create a New Account</h2>
+                </div>
+            <!--USER FORM-->
+            <form style="margin: 10px 450px;">
+                <input id="sufName" type="text" placeholder="First Name" name="fName" required>
+                <br>
+                <input id="sulName" type="text" placeholder="Last Name" name="lName" reqired>
+                <br>
+                <input id="suPhone" type="tel" placeholder="Phone Number" name="phone" required>
+                <br>
+                <input id="suEmail" type="text" placeholder="Email" name="email" reduired>
+                <br>
+                <input id="suPassword" type="password" placeholder="Password" name="password" required>
+                <br>
+                <div style="margin-top: 50px;">
+                    <a class="createLink" href="#createHome">
+                        Set Up Profile
+                        <i style="padding-left: 5px;"class="fas fa-angle-down"></i>
+                    </a>
+                </div>
+            </form>
+            <a href="#secondpage"></a>
+        </div>
+        <!--HOUSE FORM-->
+        <div class="section">
+                <div class="createHero">
+                    <h4 style="font-family: itc-avant-garde-gothic-pro, sans-serif;
+                        font-weight: 500;
+                        font-style: normal;">Before We Get Started,</h4>
+                    <h2>Tell Us About Your Home</h2>
+                </div>
+            <form>
+                <input type="number" id="suSqFt" placeholder="Approx. Square Footage" name="sqFt" min="0">
+                <br>
+                <input type="number" id="suBrNum" placeholder="Number of Bedrooms" name="brNum" min="0" max="10">
+                <br>
+                <input type="number" id="suBaNum" placeholder="Number of Bathrooms" name="baNum" min="0" max="15s">
+                <br>
+                <div style="margin-top: 50px;">
+                        <a class="createLink" href="#createTimes">
+                            Continue
+                            <i style="padding-left: 5px;"class="fas fa-angle-down"></i>
+                        </a>
+                </div>
+            </form>
+        </div>
+        <div class="section">
+            <div class="createHero">
+                <h4 style="font-family: itc-avant-garde-gothic-pro, sans-serif;
+                    font-weight: 500;
+                    font-style: normal;">Now, </h4>
+                <h2>What is Your Avaliablity?</h2>
+            </div>
+        <form>
+            <!--PREF DAY-->
+            <h5 style="
+            color:grey;
+            font-family: itc-avant-garde-gothic-pro, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding-bottom: 10px;">Preferred Cleaning Days</h5>
+            <select class="select" id="prefDay" multiple="multiple">
+                    <option value="Monday"><p>M</p></option>
+                    <option value="Tuesday">T</option>
+                    <option value="Wednesday">W</option>
+                    <option value="Thursday" >Th</option>
+                    <option value="Friday" >F</option>
+            </select>
+            <!--UNAVALIABLE DAY-->
+            <h5 style="
+            color:grey;
+            font-family: itc-avant-garde-gothic-pro, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding-bottom: 10px;">Unavaliable Cleaning Days</h5>
+            <select class="select" id="unavaliableDay" multiple="multiple">
+                    <option value="Monday"><p>M</p></option>
+                    <option value="Tuesday">T</option>
+                    <option value="Wednesday">W</option>
+                    <option value="Thursday">Th</option>
+                    <option value="Friday">F</option>
+                    <option value="Friday">N/A</option>
+            </select>
+            <h5 style="
+            color:grey;
+            font-family: itc-avant-garde-gothic-pro, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding-bottom: 10px;">Preferred Time of Day</h5>
+            <select class="select-css" id="timeOfDay">
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option selected value="No Preference">No Preference</option>
+            </select>
+            <div style="margin-top: 50px;">
+                <a class="createLink" href="#createPrefs">
+                    Continue
+                    <i style="padding-left: 5px;"class="fas fa-angle-down"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="section">
+            <div class="createHero">
+                <h4 style="font-family: itc-avant-garde-gothic-pro, sans-serif;
+                    font-weight: 500;
+                    font-style: normal;">Almost there!</h4>
+                <h2>Choose Your Cleaning Preferences</h2>
+            </div>
+        <form>
+
+            <h5 style="
+            color:grey;
+            font-family: itc-avant-garde-gothic-pro, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding-bottom: 10px;">What is the Biggest Cause of Mess In Your Home?</h5>
+            <select id="prefClean" multiple="multiple">
+                    <option value="Pet Hair">Pet Hair</option>
+                    <option value="Dust/Cobwebs">Dust/Cobwebs</option>
+                    <option value="Children">Children</option>
+                    <option value="Clutter">Clutter</option>
+            </select>
+            <br>
+            <h5 style="
+            color:grey;
+            font-family: itc-avant-garde-gothic-pro, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            padding-bottom: 10px;">Do You Want to Add Any Specialty Services?</h5>
+            <select id="specialServices" multiple="multiple">
+                    <option value="Dish Washing">Dish Washing</option>
+                    <option value="Bed Making">Bed Making</option>
+                    <option value="None">None</option>
+            </select>
+            <button id="suSubmit" class="submit">
+                Submit         
+            </button> 
+        </form>
+    </div>
+    </div>
+        <!-- update the version number as needed -->
+        <script src="/__/firebase/6.6.1/firebase-app.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script src="/__/firebase/6.6.1/firebase-auth.js"></script>
+        <script src="/__/firebase/6.6.1/firebase-firestore.js"></script>
+        <script src="/__/firebase/6.6.1/firebase-database.js"></script>
+        <script src="/__/firebase/6.6.1/firebase-messaging.js"></script>
+        <script src="/__/firebase/6.6.1/firebase-storage.js"></script>
+        <!-- initialize the SDK after all desired features are loaded -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="lib/jquery-3.4.1.min.js"></script>
+        <script src="app/firebase-model.js"></script>
+        <script type="text/javascript" src="app/fullpage.js"></script>
+        <script src="app/app.js"></script>
+</body>
+</html>
